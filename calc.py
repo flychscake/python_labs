@@ -52,6 +52,10 @@ while True:
         y = [int(z) for z in input('Введите вторую дробь: ').split('/')]
     except:
         print('Неверный ввод')
+        continue
+    if not (1 < len(x) < 3) or not (1 < len(y) < 3):
+        print('Неверный ввод')
+        continue
     action_correct = False
     while not action_correct:
         action = input('Выберите действие + - / * :')
